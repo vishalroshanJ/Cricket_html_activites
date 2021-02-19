@@ -1,0 +1,55 @@
+<html>
+<head>
+<script>
+         
+function fun1() {
+                
+var input  = document.getElementById("score").value;
+
+var sp = input.split(',');
+var sum = (sp[0]*1+sp[1]*2+sp[2]*3+sp[3]*4+sp[4]*6);
+
+
+document.getElementById("out").innerHTML=sum;
+
+
+}
+</script>
+
+
+    </head>
+
+    <body>
+
+
+
+        <div style="background-color: hotpink;">
+            <center>
+                <h1>
+                    Score meter
+                </h1>
+
+                <br>
+                <p>Enter in order the no of Singles,doubles,threes,fours and Sixes by seperating with comma
+
+                </p>
+                <br>
+
+                Enter the score spilt: <input type="text" id="score" value="" required placeholder="30,10,4,2">
+                <br>
+               <button onclick="fun1()" value=" submit">get score</button>
+                <br>
+
+                 <h2>Score is </h2><p id="out"></p>
+                
+                <br>
+
+</center>
+
+
+</div>
+
+
+ </body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<script>
+function  formMatch()
+{
+
+var inputA  = document.getElementById("Ascore").value;
+var inputB  = document.getElementById("Bscore").value;
+
+var ar=inputA.split('/');
+var ar1=inputB.split('/');
+if(ar[0]>ar1[0])
+{
+document.getElementById("outputAB").innerHTML=document.getElementById("teamA").value;;
+}
+else if(ar[0]<ar1[0])
+{
+document.getElementById("outputAB").innerHTML=document.getElementById("teamB").value;;
+}
+else if(ar[0]==ar1[0])
+{
+document.getElementById("outputAB").innerHTML='Draw';
+}
+else{ 
+document.getElementById("outputAB").innerHTML='invalid';
+}
+}
+
+</script>
+</head>
+<body style="background: lightyellow;">
+<div ><center>
+<h1>Match Summary</h1><br><br>
+<h2>TEAM A  :<input type="text" id="teamA" placeholder="Team A;"><br><br></h2> 
+<h2>TEAM B  :<input type="text" id="teamB" placeholder="Team B;"><br><br></h2>
+<h2>DATE    :<input type="date" id="date" placeholder="DD/MM/YYYY"><br><br></h2>
+<h2>TIME    :<input type="time" id="time" placeholder="HH:MM:SS"><br><br></h2> 
+<h2>TEAM A Score   :<input type="text" id="Ascore" placeholder="Runs/wicks"><br><br></h2> 
+<h2>TEAM B Score   :<input type="text" id="Bscore" placeholder="Runs/wicks"><br><br></h2>
+<button onclick="formMatch()"> submit :</button>
+<h2>winner is :</h2><p id="outputAB"></p>
+</center></div>
+</body>
+</html>

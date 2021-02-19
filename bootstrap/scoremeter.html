@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head><title>Score-Meter</title>
+<style>
+.myDiv {
+  background-color: lightpink; 
+  text-shadow:grey;
+  text-align: center;
+}
+
+</style>
+ <script type="text/javascript">
+ function add_numbers() 
+ {
+var input  = document.getElementById("score").value;
+var sp = input.split(',');
+var sum = (sp[0]*1+sp[1]*2+sp[2]*3+sp[3]*4+sp[4]*6);
+document.getElementById("out").innerHTML=sum;
+}
+</script>
+</head>
+
+<body style="background: lightpink;">
+<div class="myDiv">
+<h1>SCORE_METER</h1><br><br>
+<h2>(Enter the number of singles,doubles,triples,fours and sixes in comma seperated format)</h2><BR>
+<td>
+ Enter the score Details :<input type="text" id="score" class="heading" placeholder="Enter the singles,doubles,triples,fours and sixessingles,doubles,triples,fours and sixes " required autofocus><br><br>
+</td>
+<button onclick="add_numbers()"> Get Score </button>
+<h2>Score is </h2><p id="out"></p>
+<br>
+</div>
+</body>
+</html>
